@@ -1,0 +1,39 @@
+{% extends 'base.html'%}
+
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class=" text-center">
+        <h1 style="font-size: 50px; background-color: rgb(231, 17, 17);">{{uname}} Do You Know What is smart farming ? </h1><br>
+        <h5>Smart Farming is an concept that refers to managing farms using modern Information and Communication Technologies to increase the quantity and quality of products while optimizing the human labour required.Robotic technologies enable more reliable monitoring and management of natural resources, such as air and water quality.AI has become a backbone of the tech network</h5>
+        <br><br><br>
+        </div>
+    </div>
+  
+
+
+
+</div>
+{% for product in products %}
+
+<div class="container">
+    
+    <div class="row">
+        <div class=" text-center">
+            <img src="{{product.image.url}}" class ="img-fluid" width="800" height="300">
+            <br><br><br>
+        
+        </div>
+        <div class="text-center">
+            <h2><b>{{product.name}}</b></h2>
+            <h5>Description :{{product.description}}</h5>
+            <br><hr><br>
+
+        </div>
+    </div>
+
+
+</div>
+{%endfor%}
+{% endblock %}

@@ -1,0 +1,89 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+    <script src="{% static 'index/Jquery/jquery-3.6.0.min.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'index/css/grt-responsive-menu.css' %}">
+    <!--link rel="stylesheet" href="{% static 'index/css/orderpage.css' %}"-->
+    <script src="{% static 'index/JavaScript/grt-responsive-menu.js' %}"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <header>
+        <div class="menu-container">
+            <div class="grt-menu-row">
+                <div class="grt-menu-logo">
+                   <h2> <a href="#" class="grt-logo"></a></h2>
+                </div>
+                <div class="grt-menu-right">
+                <nav>
+                <button class="grt-mobile-button"><span class="line1"></span><span class="line2"></span><span class="line3"></span></button>
+                 <ul class="grt-menu">
+                  <li class="active"><a href="/homepage">Smart Farming</a></li>
+                  <li><a href="/orderlist">Myorder</a></li>
+                  
+                  <li><a href="/mys">Market Price</a></li>
+                  <li><a href="/logout/">Logout</a></li>
+                  <li class="grt-dropdown"><a>dropdown</a>
+                   <ul class="grt-dropdown-list">
+                   <li><a href="/search1"> Vegetables </a></li>
+                   <li><a href="/search2"> Fruits </a></li>
+                   <li><a href="/search3">All products</a></li>
+                   </ul>
+                   </li>
+                   <li><a href="/contactus">contact</a></li>								
+                </ul>
+                </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <br>
+    <br><br><br>
+
+    {% block content %}
+    {% endblock %}
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    -->
+    <footer style="background-color:gray;">
+        <div class="container">
+        <div class="row" style="padding: 10px;">
+            <div class="col-md-9" >
+                <h3>Contact Info</h3>
+                <ul>
+                    <li>Address : 652,North Kasba</li>
+                    <li>Balives , solapur</li>
+                    <li>Mob no : 898344350</li>
+                    <li>Email : kudalsiddhant230@gmail.com </li>
+                </ul>
+
+            </div>
+            <div class="col-md-3" >
+                <h3>About Project</h3>
+                    <p>Online farming shop which allows farmer to buy seeds and get services over internet using web browser</p>
+
+            </div>
+
+
+        </div>
+    </div>
+
+    </footer>
+   
+</body>
+</html>

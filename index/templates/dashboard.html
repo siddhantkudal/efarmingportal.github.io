@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      background-color:hsla(106, 62%, 26%, 0.851);
+    }
+    
+    .maindiv{
+      width: 70%;
+      height: 400px;
+      position: absolute;
+      left:50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+      background-image: url("{% static 'index/images/image1.jpg' %}");
+      background-size: 100% 100%;
+      box-shadow: 1px 2px 10px 5px black;
+      animation: slider 15s infinite linear;
+    }
+    @keyframes slider{
+
+      0%{  background-image: url("{% static 'index/images/image1.jpg' %}"); }
+      35%{ background-image: url("{% static 'index/images/image2.jpg' %}"); }
+      75%{  background-image: url("{% static 'index/images/image3.jpeg' %}"); }
+    }
+
+    .topnav {
+
+      overflow: hidden;
+      background-color: #2c6b19d9;
+      }
+
+    .topnav a {
+      float: left;
+     color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+    
+
+    .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    
+
+  </style>
+</head>
+<body>
+  
+  <div class="maindiv"></div>
+  <div class="topnav">
+    <a href="/login">LOGIN</a>
+    <a href="/register">REGISTER</a>
+    
+  </div>
+  <h1 style="text-align:center">E FARMING PORTAL</h1>
+ 
+  
+</body>
+</html>
